@@ -6,6 +6,7 @@ import KatanaInfo from "@/components/KatanaInfo";
 import { KatTicker } from "@/components/KatTicker";
 import Landing from "@/components/Landing";
 import Navbar from "@/components/Navbar";
+import ResponsiveHeading from "@/components/ResponsiveHeading";
 import Container from "@mui/material/Container";
 
 export default function Home() {
@@ -15,8 +16,15 @@ export default function Home() {
       <Landing />
       <KatTicker />
       <div className="flex flex-col items-center gap-60 pt-30">
+        <div>
+          <ResponsiveHeading size="sm">
+            In a world where gas is weaponized, yield is a battlefield, and
+            chains fracture under greed, only one remains sharp enough to cut
+            through the noise…
+          </ResponsiveHeading>
+        </div>
         <KatanaInfo />
-        <BridgeInfo />
+        {/* <BridgeInfo /> */}
         <Airdrop />
         <FAQAccordion />
       </div>

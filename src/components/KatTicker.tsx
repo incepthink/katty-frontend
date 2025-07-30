@@ -4,7 +4,7 @@ import { Box } from "@mui/material";
 import React from "react";
 
 export const KatTicker: React.FC = () => {
-  const message = "WE LIKE THE KAT 🐱";
+  const message = "#WELIKETHEKAT 🐱";
   const repeatCount = 20;
 
   return (

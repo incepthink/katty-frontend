@@ -30,7 +30,15 @@ const KatanaInfo = () => {
               electronic typesetting, remaining essentially unchanged.
             </p>
 
-            <GradientButton className="w-full">Explore Katana</GradientButton>
+            <a
+              href="https://bridge.katana.network/"
+              target="_blank"
+              className="w-full"
+            >
+              <GradientButton className="w-full">
+                Bridge to Katana
+              </GradientButton>
+            </a>
           </div>
         </div>
       </Container>

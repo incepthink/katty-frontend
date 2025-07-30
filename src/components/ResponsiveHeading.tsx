@@ -3,7 +3,7 @@ import React from "react";
 interface ResponsiveHeadingProps {
   children: React.ReactNode;
   level?: 1 | 2 | 3 | 4 | 5 | 6;
-  size?: "sm" | "md" | "lg" | "xl";
+  size?: "xs" | "sm" | "md" | "lg" | "xl";
   className?: string;
   textAlign?: "left" | "center" | "right";
 }
@@ -15,12 +15,13 @@ const ResponsiveHeading: React.FC<ResponsiveHeadingProps> = ({
   className = "",
   textAlign = "center",
 }) => {
-  // Size mappings for different responsive breakpoints
+  // Size mappings for different responsive breakpoints (including xs)
   const sizeClasses = {
-    sm: "text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl",
-    md: "text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl",
-    lg: "text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl",
-    xl: "text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl",
+    xs: "text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl",
+    sm: "text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl",
+    md: "text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl",
+    lg: "text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl",
+    xl: "text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl",
   };
 
   const textAlignClass = `text-${textAlign}`;
