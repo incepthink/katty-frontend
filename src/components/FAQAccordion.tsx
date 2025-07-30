@@ -5,11 +5,11 @@ import {
   Accordion,
   AccordionSummary,
   AccordionDetails,
-  Typography,
   Box,
   Container,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import ResponsiveHeading from "./ResponsiveHeading";
 
 interface FAQItem {
   question: string;
@@ -46,28 +46,16 @@ const faqData: FAQItem[] = [
 
 const FAQAccordion: React.FC = () => {
   return (
-    <div className="w-full pt-16">
-      <Container maxWidth="lg">
-        <Box className="flex flex-col items-center gap-10">
+    <div className="w-full pt-8 lg:pt-16">
+      <Container maxWidth="lg" className="px-4 lg:px-0">
+        <Box className="flex flex-col items-center gap-6 lg:gap-10">
           {/* Title */}
-          <div className="mb-8">
-            <Typography
-              variant="h2"
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-center text-white"
-              sx={{
-                background:
-                  "linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                textShadow: "0 0 30px rgba(59, 130, 246, 0.5)",
-              }}
-            >
-              Frequently Asked Questions
-            </Typography>
+          <div className="mb-4 lg:mb-8">
+            <ResponsiveHeading>Frequently Asked Questions</ResponsiveHeading>
           </div>
 
           {/* Accordion Container */}
-          <div className="w-full  space-y-4">
+          <div className="w-full space-y-3 lg:space-y-4">
             {faqData.map((item, index) => (
               <Accordion
                 key={index}
@@ -101,29 +89,23 @@ const FAQAccordion: React.FC = () => {
                   aria-controls={`panel${index}-content`}
                   id={`panel${index}-header`}
                   sx={{
-                    padding: "16px 24px",
+                    padding: { xs: "12px 16px", lg: "16px 24px" },
                     border: "0px",
                   }}
                 >
-                  <Typography
-                    variant="h6"
-                    className="text-lg md:text-xl font-semibold text-white"
-                  >
+                  <h6 className="text-base sm:text-lg lg:text-xl font-semibold text-white">
                     {item.question}
-                  </Typography>
+                  </h6>
                 </AccordionSummary>
 
                 <AccordionDetails
                   sx={{
-                    padding: "0 24px 24px 24px",
+                    padding: { xs: "0 16px 16px 16px", lg: "0 24px 24px 24px" },
                   }}
                 >
-                  <Typography
-                    variant="body1"
-                    className="text-base md:text-lg text-gray-300 leading-relaxed"
-                  >
+                  <p className="text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed">
                     {item.answer}
-                  </Typography>
+                  </p>
                 </AccordionDetails>
               </Accordion>
             ))}
