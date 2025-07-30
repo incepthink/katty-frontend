@@ -1,4 +1,5 @@
 import Airdrop from "@/components/Airdrop";
+import AutoMixedTextHeading from "@/components/AutoMixedTextHeading";
 import BridgeInfo from "@/components/BridgeInfo";
 import FAQAccordion from "@/components/FAQAccordion";
 import FooterBg from "@/components/FooterBg";
@@ -20,25 +21,13 @@ export default function Home() {
         px={{ xs: 2, sm: 2, md: 2, lg: 2 }}
         pt={{ xs: 8, sm: 12, md: 16, lg: 20 }}
       >
-        <ResponsiveHeading size="sm" mixedContent>
-          <span style={{ color: "white" }}>
-            In a world where gas is weaponized, yield is a battlefield, and
-            chains fracture under greed, only one
-          </span>
-          <span
-            style={{
-              background:
-                "linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-            }}
-          >
-            {" "}
-            remains sharp enough to cut through the noise…
-          </span>
-        </ResponsiveHeading>
+        <AutoMixedTextHeading size="sm" className="mx-auto">
+          In a world where gas is weaponized, yield is a battlefield, and chains
+          fracture under greed, only one remains sharp enough to cut through the
+          noise…
+        </AutoMixedTextHeading>
       </Box>
-      <div className="flex flex-col items-center gap-16 sm:gap-24 md:gap-32 lg:gap-40 xl:gap-60 pt-16 sm:pt-24 md:pt-30 lg:pt-32 xl:pt-40">
+      <div className="flex flex-col items-center gap-16 sm:gap-24 md:gap-32 lg:gap-40 xl:gap-60 pt-8 sm:pt-10 md:pt-12 lg:pt-16 xl:pt-16">
         <KatanaInfo />
         {/* <BridgeInfo /> */}
         <Airdrop />

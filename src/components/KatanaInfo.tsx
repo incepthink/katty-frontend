@@ -21,14 +21,20 @@ const KatanaInfo = () => {
             className="w-full max-w-[400px] lg:w-[500px] h-auto"
           />
           <div className="flex flex-col items-center gap-6 lg:gap-10">
-            <p className="text-md sm:text-lg lg:text-xl font-medium text-justify">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged.
-            </p>
+            <div className="text-md sm:text-lg lg:text-xl font-medium text-justify space-y-4">
+              <p>
+                Katana is a DeFi-first chain with high yield and deep liquidity;
+                deep enough to provide liquidity for the entire Agglayer
+                ecosystem.
+              </p>
+
+              <p>
+                Katana is a paradigm shift—aligning apps, users, and chain
+                revenue from day one.
+              </p>
+
+              <p>Katana is built jointly by Polygon Labs and GSR</p>
+            </div>
 
             <a
               href="https://bridge.katana.network/"
