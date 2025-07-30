@@ -13,8 +13,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Your App",
-  description: "Your app description",
+  title: "Katty",
+  description: "Katty Coin on Katana ",
 };
 
 export default function RootLayout({
