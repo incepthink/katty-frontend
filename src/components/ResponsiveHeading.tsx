@@ -6,6 +6,8 @@ interface ResponsiveHeadingProps {
   size?: "xs" | "sm" | "md" | "lg" | "xl";
   className?: string;
   textAlign?: "left" | "center" | "right";
+  whiteText?: boolean;
+  mixedContent?: boolean;
 }
 
 const ResponsiveHeading: React.FC<ResponsiveHeadingProps> = ({
@@ -14,6 +16,8 @@ const ResponsiveHeading: React.FC<ResponsiveHeadingProps> = ({
   size = "lg",
   className = "",
   textAlign = "center",
+  whiteText = false,
+  mixedContent = false,
 }) => {
   // Size mappings for different responsive breakpoints (including xs)
   const sizeClasses = {
@@ -28,15 +32,26 @@ const ResponsiveHeading: React.FC<ResponsiveHeadingProps> = ({
 
   const baseClasses = `${sizeClasses[size]} ${textAlignClass} font-bold text-white leading-tight ${className}`;
 
-  const gradientStyle = {
-    background:
-      "linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%)",
-    WebkitBackgroundClip: "text",
-    WebkitTextFillColor: "transparent",
-    textShadow: "0 0 30px rgba(59, 130, 246, 0.5)",
-    paddingBottom: "0.1em", // Add small padding for descenders
-    display: "inline-block", // Ensures proper spacing
-  };
+  const gradientStyle = whiteText
+    ? {
+        color: "white",
+        paddingBottom: "0.1em", // Add small padding for descenders
+        display: "inline-block", // Ensures proper spacing
+      }
+    : mixedContent
+    ? {
+        paddingBottom: "0.1em", // Add small padding for descenders
+        display: "inline-block", // Ensures proper spacing
+      }
+    : {
+        background:
+          "linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%)",
+        WebkitBackgroundClip: "text",
+        WebkitTextFillColor: "transparent",
+        textShadow: "0 0 30px rgba(59, 130, 246, 0.5)",
+        paddingBottom: "0.1em", // Add small padding for descenders
+        display: "inline-block", // Ensures proper spacing
+      };
 
   // Dynamically create the heading element based on level
   const HeadingTag = `h${level}` as "h1" | "h2" | "h3" | "h4" | "h5" | "h6";

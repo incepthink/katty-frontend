@@ -5,7 +5,7 @@ import TelegramIcon from "@mui/icons-material/Telegram";
 
 const Navbar = () => {
   return (
-    <div className="flex justify-between items-center pt-12 sm:pt-16 md:pt-20 lg:pt-24 px-4 sm:px-5 absolute top-0 z-50 w-full">
+    <div className="flex justify-between items-center pt-10  px-4 sm:px-5 absolute top-0 z-50 w-full">
       {/* Logo and Brand */}
       <div className="flex gap-2 sm:gap-3 items-center">
         <div className="border-black border-2 rounded-full">

@@ -24,13 +24,18 @@ const Landing = () => {
           maxWidth="sm"
           className="flex flex-col gap-4 sm:gap-8 md:gap-12 w-full mx-auto sm:mx-0 sm:items-start"
         >
-          {/* Main heading */}
-          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold leading-tight text-center sm:text-left max-w-md sm:max-w-lg md:max-w-none">
-            Katty: The Last Meowjin of Katana
-          </h1>
-          <GradientButton className="sm:w-60 text-lg! md:text-xl!">
-            Buy Now
-          </GradientButton>
+          {/* Main heading with translucent background */}
+          <div className="relative">
+            <div className="absolute inset-0 bg-black/30 backdrop-blur-xs rounded-lg -m-2 sm:-m-3 md:-m-3"></div>
+            <h1 className="relative text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold leading-tight text-center sm:text-left max-w-md sm:max-w-lg md:max-w-none text-white p-2 sm:p-3 md:p-0">
+              Katty: The Last Meowjin of Katana
+            </h1>
+          </div>
+          <a href="https://www.kensei.one/" target="_blank">
+            <GradientButton className="sm:w-60 w-full text-lg! md:text-xl!">
+              Buy Now
+            </GradientButton>
+          </a>
         </Box>
       </Container>
     </div>
