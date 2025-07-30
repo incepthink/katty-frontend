@@ -92,7 +92,7 @@ const AutoMixedTextHeading: React.FC<AutoMixedTextHeadingProps> = ({
     paddingBottom: "0.1em",
     display: "block",
     width: "100%",
-    maxWidth: "fit-content",
+    maxWidth: "1600px", // Add max-width to prevent text from being too wide on large screens
   };
 
   const whiteTextStyle = {
