@@ -33,7 +33,7 @@ const Landing = () => {
           </div>
           <a href="https://www.kensei.one/" target="_blank">
             <GradientButton className="sm:w-60 w-full text-lg! md:text-xl!">
-              Buy Now
+              Join Waitlist
             </GradientButton>
           </a>
         </Box>
