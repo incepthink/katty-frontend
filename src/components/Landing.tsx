@@ -547,7 +547,7 @@ const Landing = () => {
           >
             <Box
               component="a"
-              href="https://t.me/yourtelegramchannel"
+              href="https://t.me/kattymemekatana"
               target="_blank"
               rel="noopener noreferrer"
               sx={{
